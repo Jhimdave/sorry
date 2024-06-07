@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #898989;
+}
+.container {
+  width: 30rem;
+  height: 28rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  margin: 50px;
+}
+.container img {
+  width: 100%;
+  transition: all 1s;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  color: aliceblue;
+  padding: 20px;
+  background-color: rgb(23, 23, 23);
+  transform: translateX(-100%);
+}
+
+.content h4 {
+  text-align: justify;
+  padding: 10px;
+  line-height: 1.5;
+}
+.container:hover .content {
+  transform: translateX(0);
+}
+.container:hover img {
+  transform: translateX(100%);
+}
+
+.clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  transition: all 0.8s;
+}
+
+.clip1 {
+  background: url("img2.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 8% 0, 17% 100%, 0 100%);
+}
+
+.clip2 {
+  background: url("img3.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(39% 0, 8% 0, 17% 100%, 40% 100%);
+}
+
+.clip3 {
+  background: url("img4.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(39% 0, 62% 0, 72% 100%, 27% 100%);
+}
+
+.clip4 {
+  background: url("img5.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(62% 0, 90% 0, 77% 100%, 72% 100%);
+}
+
+.clip5 {
+  background: url("img6.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(88% 0, 77% 100%, 100% 100%, 100% 0);
+}
+
+.container:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.container .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
